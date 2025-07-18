@@ -91,7 +91,7 @@ vector_index = VectorStoreIndex(nodes)
 # Vector retriever for semantic/fallback
 vector_retriever = VectorIndexRetriever(index=vector_index, similarity_top_k=3)
 
-# Metadata retriever with semantic fallback (replaces BM25)
+# Metadata retriever with semantic fallback
 metadata_retriever = MetadataRetriever(nodes=nodes, vector_retriever=vector_retriever)
 
 # Step 4: Set Up Router for Query Detection
